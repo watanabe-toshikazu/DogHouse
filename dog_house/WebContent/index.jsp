@@ -13,6 +13,10 @@
 		<jsp:include page="page-header.jsp">
 			<jsp:param  name="page" value="menu"/>
 		</jsp:include>
+		
+		<jsp:include page="page-header2.jsp">
+			<jsp:param  name="page" value="menu"/>
+		</jsp:include>
 	
 		<h1>Menu</h1>
 		
