@@ -1,4 +1,4 @@
-package dog_house;
+package jp.co.comnic.javalesson.dog_house.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;

@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import jp.co.comnic.javalesson.dog_house.dao.AccountDao;
 import jp.co.comnic.javalesson.dog_house.dao.DaoException;
-import jp.co.comnic.javalesson.dog_house.entity.ACCOUNT;
+import jp.co.comnic.javalesson.dog_house.entity.Account;
 
 public class LoginAction implements Action {
 
@@ -22,7 +22,7 @@ public class LoginAction implements Action {
 		String forwardPass = "login";
 		
 		try {
-			ACCOUNT account = new AccountDao().loginAuthenticate(email, password);
+			Account account = new AccountDao().loginAuthenticate(email, password);
 			
 			if(account != null){
 				request.getSession().setAttribute("isAuthenticated", "AUTHENTICATED");

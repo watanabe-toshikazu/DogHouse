@@ -4,21 +4,21 @@ import javax.persistence.NoResultException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-import jp.co.comnic.javalesson.dog_house.entity.ACCOUNT;
+import jp.co.comnic.javalesson.dog_house.entity.Account;
 
 public class AccountDao extends BaseDao {
 
 	public AccountDao() throws DaoException{}
-	private CriteriaQuery<ACCOUNT> query = builder.createQuery(ACCOUNT.class);
-	private Root<ACCOUNT> root = query.from(ACCOUNT.class);
+	private CriteriaQuery<Account> query = builder.createQuery(Account.class);
+	private Root<Account> root = query.from(Account.class);
 	
-	public java.util.List<ACCOUNT> findAll(){
+	public java.util.List<Account> findAll(){
 		return super.findAll(query, root);	
 	}
 	
-	public ACCOUNT loginAuthenticate(String email, String password){
+	public Account loginAuthenticate(String email, String password){
 		
-		ACCOUNT account = null;
+		Account account = null;
 		
 		try {
 			query.select(root)

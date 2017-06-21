@@ -1,7 +1,14 @@
-package dog_house;
+package jp.co.comnic.javalesson.dog_house.entity;
 
 import java.io.Serializable;
-import javax.persistence.*;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToOne;
 
 
 /**

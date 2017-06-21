@@ -1,7 +1,11 @@
 package jp.co.comnic.javalesson.dog_house.entity;
 
 import java.io.Serializable;
-import javax.persistence.*;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 
 
 /**
@@ -9,8 +13,7 @@ import javax.persistence.*;
  * 
  */
 @Entity
-@NamedQuery(name="ACCOUNT.findAll", query="SELECT a FROM ACCOUNT a")
-public class ACCOUNT implements Serializable {
+public class Account implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -30,7 +33,7 @@ public class ACCOUNT implements Serializable {
 
 	private String password;
 
-	public ACCOUNT() {
+	public Account() {
 	}
 
 	public String getEmail() {
