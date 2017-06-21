@@ -15,5 +15,13 @@
 		<jsp:param name="page" value="menu" />
 	</jsp:include>
 	<h1>java🍲</h1>
+
+	<ul id="menu">
+		<li id="menu01"><a href="xxx.html">Home</a></li>
+		<li id="menu02"><a href="xxx.html">Overview</a></li>
+		<li id="menu03"><a href="xxx.html">Property</a></li>
+		<li id="menu04"><a href="xxx.html">Tips</a></li>
+		<li id="menu05"><a href="xxx.html">Contact</a></li>
+	</ul>
 </body>
 </html>
