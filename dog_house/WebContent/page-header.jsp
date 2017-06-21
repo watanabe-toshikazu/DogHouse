@@ -8,13 +8,6 @@
 	<a href="/dog_house/cart.jsp">カート</a>
 </p>
 
-
-	<form action="">
-		<input name="name"> 
-		<input type="submit" value="検索">
-	</form>
-
-
 <c:if test="${param.page != 'menu'}">
 	<a href="../"> ← Back to the menu</a>
 </c:if>
