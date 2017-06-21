@@ -19,7 +19,7 @@ public class LoginAction implements Action {
 		
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
-		String forwardPass = "login";
+		String forwardPass = "login.jsp";
 		
 		try {
 			Account account = new AccountDao().loginAuthenticate(email, password);
