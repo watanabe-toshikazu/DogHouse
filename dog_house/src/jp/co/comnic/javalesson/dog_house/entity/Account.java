@@ -1,11 +1,8 @@
 package jp.co.comnic.javalesson.dog_house.entity;
 
 import java.io.Serializable;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.NamedQuery;
+import javax.persistence.*;
+import java.util.List;
 
 
 /**
@@ -13,6 +10,7 @@ import javax.persistence.NamedQuery;
  * 
  */
 @Entity
+@NamedQuery(name="Account.findAll", query="SELECT a FROM Account a")
 public class Account implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -32,6 +30,18 @@ public class Account implements Serializable {
 	private String lastName;
 
 	private String password;
+
+	//bi-directional many-to-many association to Book
+	@ManyToMany(mappedBy="accounts")
+	private List<Book> books;
+
+	//bi-directional many-to-one association to BookOrder
+	@OneToMany(mappedBy="account")
+	private List<BookOrder> bookOrders;
+
+	//bi-directional many-to-one association to Card
+	@OneToMany(mappedBy="account")
+	private List<Card> cards;
 
 	public Account() {
 	}
@@ -82,6 +92,58 @@ public class Account implements Serializable {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public List<Book> getBooks() {
+		return this.books;
+	}
+
+	public void setBooks(List<Book> books) {
+		this.books = books;
+	}
+
+	public List<BookOrder> getBookOrders() {
+		return this.bookOrders;
+	}
+
+	public void setBookOrders(List<BookOrder> bookOrders) {
+		this.bookOrders = bookOrders;
+	}
+
+	public BookOrder addBookOrder(BookOrder bookOrder) {
+		getBookOrders().add(bookOrder);
+		bookOrder.setAccount(this);
+
+		return bookOrder;
+	}
+
+	public BookOrder removeBookOrder(BookOrder bookOrder) {
+		getBookOrders().remove(bookOrder);
+		bookOrder.setAccount(null);
+
+		return bookOrder;
+	}
+
+	public List<Card> getCards() {
+		return this.cards;
+	}
+
+	public void setCards(List<Card> cards) {
+		this.cards = cards;
+	}
+
+	public Card addCard(Card card) {
+		getCards().add(card);
+		card.setAccount(this);
+
+		return card;
+	}
+
+	public Card removeCard(Card card) {
+		getCards().remove(card);
+		card.setAccount(null);
+
+		return card;
 	}
 
 }

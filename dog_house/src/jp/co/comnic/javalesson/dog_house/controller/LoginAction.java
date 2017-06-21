@@ -29,6 +29,7 @@ public class LoginAction implements Action {
 				request.getSession().setAttribute("loginUsername", account.getDisplayName());
 				
 //				response.sendRedirect("/" + request.getServletContext().getServletContextName() + "/");
+//				request.getRequestDispatcher("index.jsp").forward(request, response);
 				response.sendRedirect("index.jsp");
 				
 				forwardPass = null;

@@ -1,21 +1,9 @@
 package jp.co.comnic.javalesson.dog_house.entity;
 
 import java.io.Serializable;
+import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 
 /**
@@ -47,13 +35,18 @@ public class Book implements Serializable {
 
 	private String title;
 
-	//bi-directional many-to-one association to Category
-	@ManyToOne
-	private Category category;
-
-	//bi-directional many-to-one association to Publisher
-	@ManyToOne
-	private Publisher publisher;
+	//bi-directional many-to-many association to Account
+	@ManyToMany
+	@JoinTable(
+		name="CART"
+		, joinColumns={
+			@JoinColumn(name="isbn")
+			}
+		, inverseJoinColumns={
+			@JoinColumn(name="email")
+			}
+		)
+	private List<Account> accounts;
 
 	//bi-directional many-to-many association to Author
 	@ManyToMany
@@ -68,18 +61,13 @@ public class Book implements Serializable {
 		)
 	private List<Author> authors;
 
-	//bi-directional many-to-many association to Account
-	@ManyToMany
-	@JoinTable(
-		name="CART"
-		, joinColumns={
-			@JoinColumn(name="isbn")
-			}
-		, inverseJoinColumns={
-			@JoinColumn(name="email")
-			}
-		)
-	private List<Account> accounts;
+	//bi-directional many-to-one association to Category
+	@ManyToOne
+	private Category category;
+
+	//bi-directional many-to-one association to Publisher
+	@ManyToOne
+	private Publisher publisher;
 
 	//bi-directional many-to-one association to OrderDetail
 	@OneToMany(mappedBy="book")
@@ -156,6 +144,22 @@ public class Book implements Serializable {
 		this.title = title;
 	}
 
+	public List<Account> getAccounts() {
+		return this.accounts;
+	}
+
+	public void setAccounts(List<Account> accounts) {
+		this.accounts = accounts;
+	}
+
+	public List<Author> getAuthors() {
+		return this.authors;
+	}
+
+	public void setAuthors(List<Author> authors) {
+		this.authors = authors;
+	}
+
 	public Category getCategory() {
 		return this.category;
 	}
@@ -170,22 +174,6 @@ public class Book implements Serializable {
 
 	public void setPublisher(Publisher publisher) {
 		this.publisher = publisher;
-	}
-
-	public List<Author> getAuthors() {
-		return this.authors;
-	}
-
-	public void setAuthors(List<Author> authors) {
-		this.authors = authors;
-	}
-
-	public List<Account> getAccounts() {
-		return this.accounts;
-	}
-
-	public void setAccounts(List<Account> accounts) {
-		this.accounts = accounts;
 	}
 
 	public List<OrderDetail> getOrderDetails() {
