@@ -28,7 +28,8 @@ public class LoginAction implements Action {
 				request.getSession().setAttribute("isAuthenticated", "AUTHENTICATED");
 				request.getSession().setAttribute("loginUsername", account.getDisplayName());
 				
-				response.sendRedirect("/" + request.getServletContext().getServletContextName() + "/");
+//				response.sendRedirect("/" + request.getServletContext().getServletContextName() + "/");
+				response.sendRedirect("index.jsp");
 				
 				forwardPass = null;
 			}

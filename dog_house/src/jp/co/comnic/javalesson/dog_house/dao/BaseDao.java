@@ -20,7 +20,7 @@ public class BaseDao {
 	
 	// EntityManagerはスレッド・セーフではないため、サーブレットで利用する場合、本来はインスタンス変数として
 	// 用いるべきではない (EntityManagerFactoryはスレッドセーフであり共有可能)
-	protected EntityManager em = Persistence.createEntityManagerFactory("ems-v3").createEntityManager();
+	protected EntityManager em = Persistence.createEntityManagerFactory("dog_house").createEntityManager();
 	protected EntityTransaction tx = em.getTransaction();
 	protected CriteriaBuilder builder = em.getCriteriaBuilder();
 	

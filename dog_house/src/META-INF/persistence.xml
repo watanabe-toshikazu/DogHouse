@@ -15,7 +15,7 @@
 	<class>jp.co.comnic.javalesson.dog_house.entity.Account</class>
         <properties>
             <property name="javax.persistence.jdbc.url"
-                      value="jdbc:mysql://192.168.23.129/bookstore" />
+                      value="jdbc:mysql://192.168.215.129/bookstore" />
             <property name="javax.persistence.jdbc.driver"
                       value="com.mysql.jdbc.Driver" />
             <property name="javax.persistence.jdbc.user"
