@@ -16,8 +16,13 @@ a:visited { color: #2260DD; }
 a:hover { color: #FFD700; }
 a:active { color: #FFD700; } 
 
-h1 { color: #1253A4; }
-h3 { text-align: center; }
+h1 { 
+	color: #1253A4;
+ }
+
+h3 { 
+	text-align: center;
+ }
 
 
 fieldset {
@@ -102,7 +107,7 @@ footer {
 }
 
 #menu-panel a {
-	font-size: 20px;
+	font-size: 30px;
 }
 
 .button-panel {
