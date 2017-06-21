@@ -21,5 +21,7 @@
 			<input type="submit" value="送信">
 		</fieldset>
 	</form>
+	
+	<jsp:include page="page-footer.jsp"></jsp:include>
 </body>
 </html>

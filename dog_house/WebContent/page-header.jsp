@@ -9,12 +9,11 @@
 </ul>
 <div align="center">
 <ul id="menu">
-<!--  
 	<p class="login-user">
 		Login user: ${loginUsername} <a href="${ctxPath}/logout.do"> －
 			Logout</a>
 	</p>
-	-->
+
 	<a href="/dog_house/login.jsp">ログイン</a> 
 	<a href="/dog_house/mypage.jsp">マイページ</a>
 	<a href="/dog_house/cart.jsp">カート</a>
