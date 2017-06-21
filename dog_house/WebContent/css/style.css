@@ -3,7 +3,7 @@ body {
 	margin-top: 20px;
 	width: 65%;
 	color: #575757;
-	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Noto Sans Japanese", "�q���M�m�p�S ProN W3", Hiragino Kaku Gothic ProN, Arial, Meiryo, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, Meiryo, sans-serif;
 }
 
 a {
@@ -12,18 +12,23 @@ a {
 }
 
 a:link { color: #2260DD; }
-a:visited { color: #2260DD; }
-a:hover { color: #FFD700; }
+a:visited { color: #114514; }
+a:hover { color: #ff0000; }
 a:active { color: #FFD700; } 
 
 h1 { 
-	color: #1253A4;
+	color: #000000;
  }
 
 h3 { 
 	text-align: center;
+	color: #ff8000;
  }
 
+fz{
+	color: #FFD700;
+	font-size: 60px;
+}
 
 fieldset {
 	border: 1px solid #D0D0D0;
@@ -67,7 +72,7 @@ input[readonly] {
 }
 
 input[type="date"] {
-	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Noto Sans Japanese", "�q���M�m�p�S ProN W3", Hiragino Kaku Gothic ProN, Arial, Meiryo, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, Meiryo, sans-serif;
 }
 
 input[type="reset"], .button-panel input[type="submit"] {
@@ -104,6 +109,37 @@ footer {
 	font-size: 16px;
 	padding: 1px 12px;
 	text-align: center;
+}
+#menu{
+	eight:20px; 
+	background-color:#efeb8f;
+	font-weight:bold;
+}
+#menu2{
+	eight:20px; 
+	background-color:#efeb8f;
+	font-weight:bold;
+}
+
+#menu01 {
+	width:164px; height:42px;	/*背景画像に合わせたサイズ指定*/
+
+}
+#menu02 {
+	width:156px; height:42px;	/*背景画像に合わせたサイズ指定*/
+	
+}
+#menu03 {
+	width:156px; height:42px;	/*背景画像に合わせたサイズ指定*/
+	
+}
+#menu04 {
+	width:156px; height:42px;	/*背景画像に合わせたサイズ指定*/
+	
+}
+#menu05 {
+	width:164px; height:42px;	/*背景画像に合わせたサイズ指定*/
+
 }
 
 #menu-panel a {
