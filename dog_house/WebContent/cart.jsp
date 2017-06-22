@@ -17,6 +17,7 @@
 		カートの中身表示！！！
 		</p>
 		<a href="./order.jsp" > 購入へ進む</a>
+
 		
 		
 		<jsp:include page="page-footer.jsp"></jsp:include>

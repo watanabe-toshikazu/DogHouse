@@ -14,14 +14,18 @@
 	<jsp:include page="../page-header2.jsp">
 		<jsp:param name="page" value="menu" />
 	</jsp:include>
-	<h1>java🍲</h1>
+	<h3>BOOKS > java</h3>
 
-	<ul id="menu">
-		<li id="menu01"><a href="xxx.html">Home</a></li>
-		<li id="menu02"><a href="xxx.html">Overview</a></li>
-		<li id="menu03"><a href="xxx.html">Property</a></li>
-		<li id="menu04"><a href="xxx.html">Tips</a></li>
-		<li id="menu05"><a href="xxx.html">Contact</a></li>
-	</ul>
+	<table>
+		<tr>
+			<th id="menu2">
+				<jsp:include page="./side_menu.jsp">
+					<jsp:param name="page" value="side_menu" />
+				</jsp:include>
+			</th>
+
+			<th width="768px" height="512px">標品一覧</th>
+		</tr>
+	</table>
 </body>
 </html>
