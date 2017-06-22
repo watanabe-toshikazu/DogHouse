@@ -22,7 +22,7 @@ h1 {
 
 h3 { 
 	text-align: center;
-	color: #ff8000;
+	color: #000040;
  }
 
 fz{
@@ -45,6 +45,7 @@ fieldset div {
 
 table {
 	border-collapse: collapse;
+	background-color:#efeb8f;
 }
 
 td, th { padding: 0.2em 0.7em; }
@@ -111,15 +112,26 @@ footer {
 	text-align: center;
 }
 #menu{
-	eight:20px; 
+	font-size:30px;
 	background-color:#efeb8f;
 	font-weight:bold;
 }
+
 #menu2{
-	eight:20px; 
 	background-color:#efeb8f;
-	font-weight:bold;
 }
+
+#menu3{
+	height: 768px;
+	width: 768px;
+	background-color:#efeb8f;
+}
+
+#fontop{
+	font-size: 30px;
+	font-style: italic;
+}
+
 
 #menu01 {
 	width:164px; height:42px;	/*背景画像に合わせたサイズ指定*/
@@ -144,8 +156,15 @@ footer {
 
 #menu-panel a {
 	font-size: 30px;
+	background: #FFD464;
 }
 
+#side-menu{
+	height:60%;
+	width:60%; 
+	background-color:#efeb8f;
+	font-weight:bold;
+}
 .button-panel {
 	background: #FFD464;
 	text-align: right;

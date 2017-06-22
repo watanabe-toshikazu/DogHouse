@@ -9,7 +9,9 @@
 <!DOCTYPE html>
 <html>
 
-<h3>Employee Management System</h3>
+		<jsp:include page="page-header.jsp">
+			<jsp:param  name="page" value="menu"/>
+		</jsp:include>
 
 <jsp:include page="html-header.jsp">
 	<jsp:param name="title" value="Login" />
