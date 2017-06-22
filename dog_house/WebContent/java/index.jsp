@@ -24,7 +24,9 @@
 				</jsp:include>
 			</th>
 
-			<th width="768px" height="512px">標品一覧</th>
+			<th width="768px" height="512px">
+			<a href="books.jsp">商品一覧</a>
+			</th>
 		</tr>
 	</table>
 </body>

@@ -26,7 +26,7 @@
 				</jsp:include>
 			</th>
 
-			<th width="768px" height="512px">標品一覧</th>
+			<th width="768px" height="512px">商品一覧</th>
 		</tr>
 	</table>
 	<jsp:include page="page-footer.jsp"></jsp:include>

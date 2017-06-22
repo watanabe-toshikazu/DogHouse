@@ -21,6 +21,7 @@ public class BookDao extends BaseDao  {
 	
 	public  Book findByCategoryId(Integer id){
 		
+
 //		queryForBook.select(bookroot).where(categoryId = id);
 		
 		
